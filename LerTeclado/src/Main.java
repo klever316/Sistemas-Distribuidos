@@ -16,7 +16,7 @@ public class Main {
 		
 		lerTeclado.close();
 		
-		new EscreverArquivo();
+		new EscreverArquivo(linha);
 
 	}
 

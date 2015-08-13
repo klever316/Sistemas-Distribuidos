@@ -10,7 +10,7 @@ public class EscreverArquivo {
 	
 	
 
-	public EscreverArquivo() throws IOException {
+	public EscreverArquivo(String linha) throws IOException {
 		
 		//Abri arquivo para escrever cadeia de bytes
 		OutputStream outputStream = new FileOutputStream("testeArquivo");
@@ -22,7 +22,7 @@ public class EscreverArquivo {
 		BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 				
 		//Escreve uma linha no arquivo e move o cursor do arquivo uma linha para baixo
-		bufferedWriter.write("testeArquivo");
+		bufferedWriter.write(linha);
 		bufferedWriter.newLine();
 
 		//Força enviar cadeia de Char para arquivo físico e fecha arquivo
