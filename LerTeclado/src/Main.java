@@ -4,14 +4,17 @@ import NegocioLoc.Cliente;
 import NegocioLoc.Filmes;
 import NegocioLoc.Funcionario;
 import locadora.io.EscreverArquivo;
+import locadora.io.LerArquivo;
 import locadora.io.LerTeclado;
 
 public class Main {
 
+	private static final String REGISTRO_CLIENE = "RegistrosCliente"; 
+	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		// //new LerTeclado();
+ 		// //new LerTeclado();
 		// LerTeclado lerTeclado = new LerTeclado();
 		//
 		// String linha = lerTeclado.lerLinha();
@@ -19,6 +22,29 @@ public class Main {
 		// lerTeclado.close();
 		//
 		// new EscreverArquivo(linha);
+
+		//Escreve arquivo
+		//escrever();
+		
+		//Ler arquivo
+
+
+	}
+	
+	public static void lerArquivo() throws IOException{
+		
+		LerArquivo lerArquivo = new LerArquivo(REGISTRO_CLIENE);
+		
+		String linha = lerArquivo.readLine();
+		while(linha != null){
+			
+			String[] lista = linha.split("#");
+			
+			linha = lerArquivo.readLine();
+		}
+	}
+	
+	public static void escrever() throws IOException{
 
 		EscreverArquivo escreverArquivo = new EscreverArquivo("RegistrosCliente");
 		LerTeclado lerTeclado = new LerTeclado();
@@ -71,6 +97,6 @@ public class Main {
 		escreverArquivo2.escreverLinha(filme.toString());
 
 		escreverArquivo2.close();
-
 	}
+	
 }
