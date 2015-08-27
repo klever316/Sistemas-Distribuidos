@@ -37,5 +37,11 @@ public class Filmes {
 
 	public void setQuantidadeLotacao(String quantidadeLotacao) {
 		QuantidadeLotacao = quantidadeLotacao;
+		
 	}
+	@Override
+	public String toString() {
+		return this.getNomeFilme() + "#" + this.getTipoFilme() + "#" + this.getQuantidadeFilme();
+	}
+	
 }
