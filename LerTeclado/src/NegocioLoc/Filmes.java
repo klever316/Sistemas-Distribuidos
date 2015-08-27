@@ -2,22 +2,40 @@ package NegocioLoc;
 
 public class Filmes {
 
-	private String nome;
-	private String tipo;
+	private String NomeFilme;
+	private String TipoFilme;
+	private int QuantidadeFilme;
+	private String QuantidadeLotacao;
 
-	public String getNome() {
-		return nome;
+	public String getNomeFilme() {
+		return NomeFilme;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeFilme(String nomeFilme) {
+		NomeFilme = nomeFilme;
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getTipoFilme() {
+		return TipoFilme;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setTipoFilme(String tipoFilme) {
+		TipoFilme = tipoFilme;
+	}
+
+	public int getQuantidadeFilme() {
+		return QuantidadeFilme;
+	}
+
+	public void setQuantidadeFilme(int quantidadeFilme) {
+		QuantidadeFilme = quantidadeFilme;
+	}
+
+	public String getQuantidadeLotacao() {
+		return QuantidadeLotacao;
+	}
+
+	public void setQuantidadeLotacao(String quantidadeLotacao) {
+		QuantidadeLotacao = quantidadeLotacao;
 	}
 }

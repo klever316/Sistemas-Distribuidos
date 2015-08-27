@@ -1,6 +1,7 @@
 import java.io.IOException;
 
 import NegocioLoc.Cliente;
+import NegocioLoc.Filmes;
 import NegocioLoc.Funcionario;
 import locadora.io.EscreverArquivo;
 import locadora.io.LerTeclado;
@@ -38,7 +39,7 @@ public class Main {
 		EscreverArquivo escreverArquivo1 = new EscreverArquivo("RegistroFuncionarios");
 		LerTeclado lerTeclado1 = new LerTeclado();
 		Funcionario funcionario = new Funcionario();
-		
+
 		System.out.println("Informe o nome do Funcionário");
 		String nome1 = lerTeclado1.lerLinha();
 		funcionario.setNome(nome1);
@@ -50,6 +51,26 @@ public class Main {
 		escreverArquivo1.escreverLinha(funcionario.toString());
 
 		escreverArquivo1.close();
+
+		EscreverArquivo escreverArquivo2 = new EscreverArquivo("RegistroFilmes");
+		LerTeclado lerTeclado2 = new LerTeclado();
+		Filmes filme = new Filmes();
+
+		System.out.println("Informe o nome do Filmes ");
+		String NomeFilme = lerTeclado2.lerLinha();
+		filme.setNomeFilme(NomeFilme);
+
+		System.out.println("Informe o tipo de filme: ");
+		String TipoFilme = lerTeclado2.lerLinha();
+		filme.setTipoFilme(TipoFilme);
+
+		System.out.println("Informe a quantidade de filmes: ");
+		String QuantidadeFilme = lerTeclado2.lerLinha();
+		filme.setQuantidadeFilme(Integer.parseInt(QuantidadeFilme));
+
+		escreverArquivo2.escreverLinha(filme.toString());
+
+		escreverArquivo2.close();
 
 	}
 }
