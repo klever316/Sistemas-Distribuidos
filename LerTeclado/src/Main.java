@@ -9,7 +9,7 @@ import locadora.io.LerTeclado;
 
 public class Main {
 
-	private static final String REGISTRO_CLIENE = "RegistrosCliente"; 
+	private static final String REGISTRO_CLIENTE = "RegistrosCliente"; 
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -33,7 +33,7 @@ public class Main {
 	
 	public static void lerArquivo() throws IOException{
 		
-		LerArquivo lerArquivo = new LerArquivo(REGISTRO_CLIENE);
+		LerArquivo lerArquivo = new LerArquivo(REGISTRO_CLIENTE);
 		
 		String linha = lerArquivo.readLine();
 		while(linha != null){
