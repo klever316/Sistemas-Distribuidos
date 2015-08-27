@@ -30,8 +30,8 @@ public class LerTeclado {
 		String line = bufferedReader.readLine();
 		return line;
 	}
-
-	public void close() throws IOException {
+	
+		public void close() throws IOException {
 
 		// Close
 		bufferedReader.close();

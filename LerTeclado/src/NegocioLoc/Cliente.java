@@ -1,11 +1,10 @@
 package NegocioLoc;
 
 public class Cliente extends Pessoa {
-	
+
 	float SaldoDevedor;
-	
-	public Cliente(){
-		
+
+	public Cliente() {
 
 	}
 
